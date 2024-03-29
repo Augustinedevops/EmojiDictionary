@@ -1,4 +1,4 @@
-mood = input("Emotion> ")
+mood = input("Emotion: ")
 emojibank = {
     "happy": "😄",
     "sad": "😢",
@@ -9,9 +9,9 @@ emojibank = {
 }
 output = ''
 
-for word in mood.split():
-    if word.lower() in emojibank:
-        output += emojibank[word.lower()] + " "
-        print("Today, I am " + (output))
-    else:
-        print("Emoji does not exist yet!")
+def emotion(mood,emojibank):
+    output = emojibank[mood.lower()] + " "
+    return(output)
+
+emotion(mood,emojibank)
+print("Today I am "+(emotion(mood,emojibank)))
